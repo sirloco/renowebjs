@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Renoweb 3.0</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+    crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="/static/Imagenes/ciervoFavicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <!--CSS personalizado-->
+    <link rel="stylesheet" href="/css/estilos.css">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-custom">
+      <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="#"><img src="/Imagenes/ciervoptr.png" alt="Renoweb" /></a>
+            <a>Renoweb 3.0</a>
+          </div>
+          <h1><%=tecnico%></h1>
+      </div>
+    </nav>
+
+    <div class="contenedor">
+      <div class="row">
+
+        <div class="col-sm-2">
+            <input type="text"
+                   class="fecha"
+                   placeholder="Fecha Cita"
+                   onfocus="(this.type='date')"
+                   onblur="(this.type='text')">
+        </div>
+
+        <div class="col-sm-2">
+            <input type="text"
+                   class="fecha"
+                   placeholder="Fecha Ejecucion"
+                   onfocus="(this.type='date')"
+                   onblur="(this.type='text')">
+
+
+        </div>
+
+        <div class="col-sm-2">
+
+          <select class="form-control" id="est">
+            <option>Estado</option>
+            <option>Pendiente</option>
+            <option>Finalizado</option>
+            <option>Transportado</option>
+            <option>Sin Retirar</option>
+            <option>Lekura</option>
+            <option>Garantia</option>
+            <option>Usuario</option>
+            <option>Otros</option>
+          </select>
+
+        </div>
+
+        <div class="col-sm-5">
+          <input type="text" placeholder="Departamento" class="form-control" id="dep">
+        </div>
+
+        <div class="col-sm-1">
+          <input type="text" placeholder="WO" class="form-control" id="wo">
+        </div>
+
+       </div> <!-- Fin de la fila 1-->
+       <hr> <!-- Separador -->
+
+       <div class="row"> <!-- Fila 2-->
+
+         <div class="col-sm-4">
+           <input type="text" placeholder="Usuario" class="form-control" id="usu">
+         </div>
+
+         <div class="col-sm-6">
+           <input type="text" placeholder="Ubicacion Renove" class="form-control" id="ubi">
+         </div>
+
+         <div class="col-sm-2">
+           <input type="text" placeholder="Provincia" class="form-control" id="pro">
+         </div>
+       </div> <!-- Fin de la fila 2-->
+       <hr> <!-- Separador -->
+
+       <div class="row"> <!-- Fila 3-->
+
+         <div class="col-sm-6">
+           <textarea class="form-control" rows="3" id="post" placeholder="Notas post"></textarea>
+         </div>
+
+         <div class="col-sm-6">
+           <textarea class="form-control" rows="3" id="pre" placeholder="Notas Pre"></textarea>
+         </div>
+
+       </div><!-- Fin de la fila 3-->
+
+      <hr>
+      <div class="cetiquetas">
+
+        <div class="row">
+
+          <div class="col-7">
+            <div class="row">
+
+              <div class="col-3">
+                <label>Ordenador</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Ret.</span>
+                  <input type="text" class="form-control">
+                </div>
+
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Ins.</span>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-3">
+                <label>Monitor</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Ret.</span>
+                  <input type="text" class="form-control">
+                </div>
+
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Ins.</span>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-3">
+                <label>Base</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Ret.</span>
+                  <input type="text" class="form-control">
+                </div>
+
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Ins.</span>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+            <div class="col-3">
+              <label>Otros</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Ret.</span>
+                <input type="text" class="form-control">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Ins.</span>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-5 align-self-center">
+          <div class="row">
+
+            <div class="col-3">
+              <button type="button" class="btn btn-success btn-lg">Guardar</button>
+            </div>
+            <div class="col-3">
+              <button type="button" class="btn btn-danger btn-lg">Limpiar</button>
+            </div>
+            <div class="col-3">
+              <button type="button" class="btn btn-info btn-lg">Buscar</button>
+            </div>
+            <div class="col-3">
+              <button type="button" class="btn btn-primary btn-lg">Listado</button>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        </div> <!-- FIN Fila etiquetas a poner -->
+
+         </div>
+
+       </div>
+
+  </body>
+</html>
